@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-widget-container{
+  margin-left: auto;
+}
+.navbar{
+  background-color: rgb(175, 183, 191);
+  font-family: 'Arial', sans-serif;
+}
+.navbar .btn-link{
+    margin-right: 50px; 
+}
