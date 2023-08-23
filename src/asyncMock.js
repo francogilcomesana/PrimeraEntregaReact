@@ -4,12 +4,12 @@ const products = [
         name: "Cartera",
         price: "1000",
         category: "Carteras",
-        img: "https://ibb.co/5xNgBZc",
+        img: "https://i.postimg.cc/Gt04V9FK/mochila1.jpg",
         stock:"25",
         description: "Descripcion de cartera"
     },
-    { id: "2", name: "Bolso", price: "900", category: "bolsos", img:"https://ibb.co/FByjvNF", description:"descripcion de bolso"}
-    ,{ id: "3", name: "Cartera", price: "1200", category: "carteras", img:"https://ibb.co/9WNrQtH", description:"descripcion cartera"}
+    { id: "2", name: "Bolso", price: "900", category: "bolsos", img:"https://i.postimg.cc/bvBD0mdK/bolso2.jpg", description:"descripcion de bolso"}
+    ,{ id: "3", name: "Cartera", price: "1200", category: "carteras", img:"https://i.postimg.cc/hjQJ2Vdh/modelo5.jpg", description:"descripcion cartera"}
 ]
 
 export const getProducts = () => {
@@ -18,5 +18,13 @@ export const getProducts = () => {
             resolve(products)
         },500)
         
+    })
+}
+
+export const getProductById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productId))
+        }, 500)
     })
 }
