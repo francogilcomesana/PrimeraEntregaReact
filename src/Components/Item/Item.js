@@ -1,8 +1,9 @@
 import "./Item.css"
 
 
-const Item = ({id, name, img, price, stock}) => {
-    return(
+
+const Item = ({ id, name, img, price, stock }) => {
+    return (
         <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
@@ -10,7 +11,7 @@ const Item = ({id, name, img, price, stock}) => {
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg"/>
+                <img src={img} alt={name} className="ItemImg" />
             </picture>
             <section>
                 <p className="Info">
@@ -21,9 +22,11 @@ const Item = ({id, name, img, price, stock}) => {
                 </p>
             </section>
             <footer className="ItemFooter">
-                <button className="Option">Ver Detalle</button>
+                <Link to={`/item/${id}`} className="Option">Ver Detalle</Link>
             </footer>
 
         </article>
     )
 }
+
+export default Item

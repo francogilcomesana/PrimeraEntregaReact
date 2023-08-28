@@ -9,7 +9,7 @@ const products = [
         description: "Descripcion de cartera"
     },
     { id: "2", name: "Bolso", price: "900", category: "bolsos", img:"https://i.postimg.cc/bvBD0mdK/bolso2.jpg", description:"descripcion de bolso"}
-    ,{ id: "3", name: "Cartera", price: "1200", category: "carteras", img:"https://i.postimg.cc/hjQJ2Vdh/modelo5.jpg", description:"descripcion cartera"}
+    ,{ id: "3", name: "Cartera", price: "1200", category: "Riñoneras", img:"https://i.postimg.cc/hjQJ2Vdh/modelo5.jpg", description:"descripcion cartera"}
 ]
 
 export const getProducts = () => {
@@ -28,3 +28,13 @@ export const getProductById = (productId) => {
         }, 500)
     })
 }
+
+export const getProductsByCategory = (category) => {
+    // Filtrar los productos por categoría y devolverlos
+    const filteredProducts = products.filter(prod => prod.category === category);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(filteredProducts);
+        }, 500);
+    });
+};
